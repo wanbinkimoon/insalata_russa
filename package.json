@@ -1,0 +1,22 @@
+{
+  "name": "tweetbotschifo",
+  "version": "1.0.0",
+  "description": "tweet bot everything sucks ",
+  "main": "bot.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wanbinkimoon/insalata_russa.git"
+  },
+  "author": "nicola bertelloni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wanbinkimoon/insalata_russa/issues"
+  },
+  "homepage": "https://github.com/wanbinkimoon/insalata_russa#readme",
+  "dependencies": {
+    "twit": "^2.2.5"
+  }
+}
