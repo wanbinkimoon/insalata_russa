@@ -4,7 +4,7 @@
   "description": "tweet bot everything sucks ",
   "main": "bot.js",
   "scripts": {
-    "test": "npm start"
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",

@@ -1,5 +1,5 @@
-var lemmi = 
-["a",
+module.exports = {
+  lemmi:   ["a",
 "a",
 "abate",
 "abate",
@@ -15476,4 +15476,5 @@ var lemmi =
 "zucco",
 "zulù",
 "zuppiera",
-"zzz"];
+"zzz"],
+};

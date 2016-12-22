@@ -10,18 +10,28 @@ var Config = require('./config');
 // LOgging in a variable.
 var T = new Twit(Config);
 
+// Loading the array 
+var voc =require('./lemmi');
+// Testing the voc
+console.log("We have just loaded " + voc.lemmi.length + " words… 😱 \n");
+
 // Twitting stuff.
 
-tweetIt();
-setInterval( tweetIt, 1000*30);
+// Setting the interval.
+ var int = 1000*10;
+
+//tweetIt();
+setInterval( tweetIt, int);
+
+var ord = 1;
 
 function tweetIt(){
-	var r = Math.floor(Math.random()*100);
-
 	var tweet = {
-	// status: "i'm a 🤖 and i'm working… 🤓",
-	status: r + " is a gret number for a 🤖",
-};
+	status: "Ho appena pensato che «" + voc.lemmi[ord] + "» fa schifo" ,
+	};
+	console.log(voc.lemmi[ord]);
+	ord += 1;	
+
 	T.post('statuses/update', tweet, tweeted);
 
 	function tweeted(err, data, response){
