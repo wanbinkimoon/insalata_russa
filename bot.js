@@ -10,7 +10,7 @@ var Config = require('./config');
 // LOgging in a variable.
 var T = new Twit(Config);
 
-// Loading the array 
+// Loading the array
 var voc =require('./lemmi');
 // Testing the voc
 console.log("We have just loaded " + voc.lemmi.length + " words… 😱 \n");
@@ -18,19 +18,19 @@ console.log("We have just loaded " + voc.lemmi.length + " words… 😱 \n");
 // Twitting stuff.
 
 // Setting the interval.
- var int = 1000*10;
+ var int = 1000*60*30;
+ var ord = 0;
 
-//tweetIt();
+tweetIt();
 setInterval( tweetIt, int);
 
-var ord = 1;
 
 function tweetIt(){
 	var tweet = {
-	status: "Ho appena pensato che «" + voc.lemmi[ord] + "» fa schifo" ,
+	status: "🤖 -> Ho appena #pensato che #" + voc.lemmi[ord] + " fa #schifo \n #bot" ,
 	};
 	console.log(voc.lemmi[ord]);
-	ord += 1;	
+	ord += 1;
 
 	T.post('statuses/update', tweet, tweeted);
 
@@ -40,6 +40,6 @@ function tweetIt(){
 		} else {
 			console.log("Everything went fine… 🙌 \n");
 		}
-	}	
+	}
 
 }
